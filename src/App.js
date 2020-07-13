@@ -49,6 +49,20 @@ class App extends Component {
    })
   }
 
+  //gets executed only once when the component is first loaded to the page
+  componentDidMount(){
+    console.log('component mounted')
+  }
+
+  //gets executed only when the component props or its state changes
+  //could be after changing a state by interacting with the form and submit or deleting a ninja
+  //because clicking submit after adding a ninha calls a method and that handleSubmit or deleteNinja changes the state or props
+  
+  componentDidUpdate(prevpProps, prevState) {
+    console.log('component updated')
+    console.log(prevpProps, prevState)
+  }
+
   render() {
     return (
       <div className="App">

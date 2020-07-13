@@ -17,7 +17,7 @@ class AddNinja extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         //displays whatever the user types in to the form
-        console.log(this.state);
+        // console.log(this.state);
         //this is simply a way to pass data from child component to the parent component (Add.js) 
         //so that the newly added ninja can be automatically shown on the user page
         this.props.addNinja(this.state)

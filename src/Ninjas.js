@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Ninjas.css';
 //This is a functional/UI based component.
 
 /**
