@@ -14,14 +14,28 @@ const Ninjas = (props) => {
     const { ninjas } = props;
     // const ninjas = this.props.ninjas;
     //iterate over our ninjas list and display the list in jsX formats to the user / parent component who needs this component
-    const ninjasList = ninjas.map((each_record) => {
-        return (
-            <div className="ninja" key={each_record.id}>
-                <div>Name : { each_record.name }</div>
-                <div>Age : { each_record.age }</div>
-                <div>Belt : { each_record.belt }</div>
+    // const ninjasList = ninjas.map((each_record) => {
+    //     if (each_record.age > 20) {
+    //         return (
+    //             <div className="ninja" key={each_record.id}>
+    //                 <div>Name : { each_record.name }</div>
+    //                 <div>Age : { each_record.age }</div>
+    //                 <div>Belt : { each_record.belt }</div>
+    //             </div>
+    //         )    
+    //     } else {
+    //         return null
+    //     }
+        
+    // })
+    const ninjasList = ninjas.map((each_ninja) => {
+        return each_ninja.age > 20 ? (
+            <div className="ninja" key={each_ninja.id}>
+                <div>Name : { each_ninja.name }</div>
+                <div>Age : { each_ninja.age }</div>
+                <div>Belt : { each_ninja.belt }</div>
             </div>
-        )    
+        ) : null;
     })
 
     return (
